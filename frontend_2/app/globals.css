@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-color: #f0f2f5;
+  --card-background: #ffffff;
+  --primary-text: #1c1e21;
+  --secondary-text: #606770;
+  --primary-blue: #1877f2;
+  --border-color: #dddfe2;
+  --green: #42b72a;
+  --red: #fa383e;
+}
+
+body {
+  @apply antialiased;
+  background-color: var(--background-color);
+  color: var(--primary-text);
+}
+
+/* Custom card styles */
+.uploader-card {
+  @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+}
+
+.uploader-card h2 {
+  @apply text-2xl font-bold mb-2 text-gray-800;
+}
+
+.uploader-card p {
+  @apply text-gray-600 mb-4;
+}
+
+.result-card {
+  @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+}
+
+.result-card h2 {
+  @apply text-2xl font-bold mb-4 text-gray-800;
+}
+
+.result-card h3 {
+  @apply text-xl font-semibold mb-3 mt-6 text-gray-700;
+}
+
+/* Fake/Real specific styles */
+.result-card.fake {
+  @apply border-red-500;
+}
+
+.result-card.real {
+  @apply border-green-500;
+}
+
+/* Error and placeholder cards */
+.error-card {
+  @apply bg-red-50 border-red-500 text-red-700 flex flex-col items-center justify-center min-h-[200px];
+}
+
+.placeholder-card {
+  @apply bg-gray-50 border-gray-300 text-gray-500 flex flex-col items-center justify-center min-h-[200px];
+}
+
+/* Metadata grid */
+.metadata-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-4 mt-4;
+}
+
+.metadata-item {
+  @apply flex items-start gap-3 p-3 bg-gray-50 rounded-lg;
+}
+
+.metadata-icon {
+  @apply text-primary-500 text-xl mt-1;
+}
+
+.metadata-label {
+  @apply text-sm text-gray-500 block;
+}
+
+.metadata-value {
+  @apply text-base font-medium text-gray-800 block;
+}
